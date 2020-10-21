@@ -621,7 +621,7 @@ button {
   }
 }
 
-@media (max-width:1280px) {
+@media (max-width:1440px) {
   .container {
     max-width: 980px;
   }
@@ -693,6 +693,9 @@ button {
   }
   .about-us-info-block2-item {
     padding-left: 103px;
+  }
+  .how-we-work-steps-item:not(:last-child) {
+    margin-right: 65px;
   }
   .how-we-work-article-info {
     max-width: 437px;
