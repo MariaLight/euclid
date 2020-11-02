@@ -56,7 +56,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  /* background-color: var(--bg-grey); */
+  font-stretch: extra-expanded;
   color: var(--dark-grey);
   font-size: 16px;
   line-height: 32px;
@@ -96,6 +96,12 @@ button {
   border: none;
   color: var(--white);
   background-color: var(--orange);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
 }
 
 .title {
@@ -109,7 +115,7 @@ button {
 
 .title-2 {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
@@ -149,7 +155,7 @@ button {
 .header-nav-list {
   display: flex;
   align-items: center;
-  margin-right: 70px;
+  margin-right: 72px;
 }
 
 .header-nav-item {
@@ -159,12 +165,14 @@ button {
 }
 
 .header-nav-item:not(:last-child) {
-  margin-right: 55px;
+  margin-right: 85px;
 }
 
 .header-nav-link {
   color: var(--dark-grey);
-  border-bottom: 2px solid inherit;
+  border-bottom: 2px solid transparent;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .header-nav-link:hover, .header-nav-link:focus {
@@ -178,6 +186,7 @@ button {
   background-image: url(../img/header/search.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  margin-right: 10px;
 }
 
 .search-btn:hover, .search-btn:focus {
@@ -189,10 +198,12 @@ button {
   background-image: url(../img/poster/main-bg-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 103px;
+  padding-top: 108px;
   padding-bottom: 90px;
-  padding-left: 81px;
-  margin-bottom: 100px;
+  padding-left: 78px;
+  margin-bottom: 103px;
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
 }
 
 .poster-article {
@@ -205,14 +216,14 @@ button {
   font-weight: 800;
   font-size: 70px;
   line-height: 86px;
-  margin-bottom: 32px;
+  margin-bottom: 17px;
 }
 
 .poster-description {
   font-weight: 700;
-  font-size: 23px;
+  font-size: 23.5px;
   line-height: 29px;
-  margin-bottom: 97px;
+  margin-bottom: 95px;
 }
 
 .poster-btn {
@@ -227,16 +238,16 @@ button {
 }
 
 .about-us {
-  margin-bottom: 100px;
+  margin-bottom: 106px;
 }
 
 .about-us-title {
-  margin-bottom: 10px;
+  margin-bottom: 19px;
 }
 
 .about-us-description {
   max-width: 1235px;
-  margin-bottom: 44px;
+  margin-bottom: 43px;
 }
 
 .about-us-picture {
@@ -250,14 +261,14 @@ button {
 
 .about-us-info-block1 {
   display: flex;
-  flex: 0 0 49%;
+  max-width: 871px;
+  max-height: 622px;
   flex-direction: column;
   justify-content: flex-end;
   background-image: url(../img/about-us/about-us.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0;
-  padding-top: 446px;
 }
 
 .about-us-info-block-more-module {
@@ -265,7 +276,7 @@ button {
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
   color: var(--white);
-  padding: 44px 62px 42px 54px;
+  padding: 38px 69px 42px 54px;
 }
 
 .about-us-info-block-description {
@@ -276,7 +287,7 @@ button {
 .about-us-info-block-btn {
   border: 3px solid var(--orange);
   background-color: rgba(0, 0, 0, 0);
-  padding: 20px 38px;
+  padding: 18px 35px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -294,8 +305,9 @@ button {
 .about-us-info-block2-item {
   display: flex;
   border: 1px solid var(--light-grey);
-  padding: 67px 118px 72px 63px;
+  padding: 67px 118px 65px 63px;
   background: var(--white);
+  max-height: 295px;
 }
 
 .about-us-info-block2-item:not(:last-child) {
@@ -307,30 +319,30 @@ button {
   margin-left: 59px;
 }
 
-.consult::before {
+.about-us-info-block2-item-title {
+  margin-bottom: 5px;
+}
+
+.consult::before, .quality::before {
   content: '';
   display: block;
   width: 178px;
   height: 137px;
-  background-image: url(../img/about-us/consult.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
+}
+
+.consult::before {
+  background-image: url(../img/about-us/consult.svg);
 }
 
 .quality::before {
-  content: '';
-  display: block;
-  width: 178px;
-  height: 137px;
   background-image: url(../img/about-us/quality.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left center;
 }
 
 .how-we-work {
-  margin-bottom: 100px;
+  margin-bottom: 103px;
 }
 
 .how-we-work-title {
@@ -339,17 +351,19 @@ button {
 
 .how-we-work-steps-list {
   display: flex;
-  margin-bottom: 49px;
+  margin-bottom: 35px;
 }
 
 .how-we-work-steps-item:not(:last-child) {
-  margin-right: 75px;
+  margin-right: 89px;
 }
 
 .how-we-work-steps-link {
   color: var(--dark-grey);
   font-size: 18px;
-  padding: 10px;
+  padding: 10px 0px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .how-we-work-steps-link:hover {
@@ -360,18 +374,20 @@ button {
   display: flex;
   justify-content: space-between;
 }
+
 .how-we-work-article-info {
   max-width: 758px;
 }
 
 .how-we-work-article-description {
-  margin-bottom: 50px;
+  margin-bottom: 57px;
 }
 
 .how-we-work-article-btn {
   display: inline-block;
   font-weight: 700;
-  padding: 20px 38px;
+  line-height: 20px;
+  padding: 20px 40px;
 }
 
 .how-we-work-article-btn:hover, .how-we-work-article-btn:focus {
@@ -383,7 +399,8 @@ button {
   background-color: transparent;
   border: 1px solid var(--dark-grey);
   color: var(--dark-grey);
-  margin-left: 25px;
+  margin-left: 24px;
+  padding: 20px 38px;
 }
 
 .how-we-work-article-btn-white:hover, .how-we-work-article-btn-white:focus {
@@ -425,8 +442,11 @@ button {
   justify-content: space-between;
   align-items: center;
   color: var(--dark-grey);
-  padding-top: 38px;
-  padding-bottom: 44px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  padding-left: 5px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .questions-item-link:hover, .questions-item-link:focus {
@@ -475,17 +495,18 @@ button {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 46px;
   padding-bottom: 80px;
 }
 
 .footer-info {
   display: flex;
   flex-direction: column;
+  margin-bottom: 0;
 }
 
 .footer-logo {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   width: 224px;
 }
 
@@ -493,7 +514,7 @@ button {
   color: var(--light-grey);
   font-weight: 600;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 36px;
   border-bottom: 2px solid transparent;
 }
 
@@ -504,7 +525,7 @@ button {
 .social-media {
   display: flex;
   align-items: center;
-  margin-top: auto;
+  margin-top: 109px;
 }
 
 .social-media-icon:not(:last-child) {
@@ -517,6 +538,8 @@ button {
   display: block;
   background-size: contain;
   background-repeat: no-repeat;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 .fb {
@@ -528,7 +551,6 @@ button {
 }
 
 .vk {
-  
   background-image: url(../img/footer/social-media/vk.svg);
 }
 
@@ -548,36 +570,45 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 570px;
+  max-width: 680px;
+  height: 100%;
+  align-self: center;
+  padding-top: 14px;
+  padding-left: 105px;
 }
 
 .footer-form-title {
   font-weight: 400;
   color: var(--light-grey);
-  margin-bottom: 31px;
+  margin-bottom: 20px;
 }
 
 .footer-input {
-  width: 100%;
+  display: block;
+  width: 570px;
   background-color: #414141;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
   color: var(--light-grey);
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   border: 1px solid #414141;
   padding-left: 24px;
   padding-top: 14px;
   padding-bottom: 14px;
 }
 
-.footer-input:last-child {
-  margin-bottom: 31px;
+textarea {
+  min-height: 150px;
+  max-height: 150px;
+  min-width: 570px;
+  max-width: 570px;
 }
 
 .footer-form-send {
   display: flex;
   align-items: center;
+  margin-top: 8px;
 }
 
 .footer-btn {
@@ -602,7 +633,7 @@ button {
 }
 
 .footer-description {
-  width: 320px;
+  max-width: 363px;
   align-self: center;
   color: var(--light-grey);
   font-size: 16px;
@@ -626,8 +657,14 @@ button {
   .container {
     max-width: 1260px;
   }
+  .about-us-info-block1 {
+    flex: 0 0 49%;
+  }
   .about-us-info-block-description {
     margin-right: 20px;
+  }
+  .about-us-info-block2-item {
+    padding: 40px 35px;
   }
   .how-we-work-article-info {
     max-width: 550px;
@@ -636,20 +673,28 @@ button {
     max-width: 600px;
     object-position: 20% 100%;
   }
+  .footer-description {
+    max-width: 270px;
+  }
 }
 
 @media (max-width: 1440px) {
   .container {
     max-width: 980px;
   }
+  .header-nav-item:not(:last-child) {
+    margin-right: 40px;
+  }
   .about-us-info-block {
     flex-wrap: wrap;
   }
   .about-us-info-block1, .about-us-info-block2 {
     flex: 0 0 100%;
+    max-width: 100%;
   }
   .about-us-info-block1 {
     margin-bottom: 30px;
+    min-height: 924px;
   }
   .about-us-info-block-btn {
     padding: 20px 38px;
@@ -665,7 +710,7 @@ button {
     margin-left: auto;
   }
   .footer-btn {
-    padding: 20px 13px;
+    padding: 20px 40px;
   }
   .footer-description {
     width: 0;
@@ -676,12 +721,16 @@ button {
 }
 
 @media (max-width: 1024px) {
+  .title {
+    font-size: 48px;
+    line-height: 59px;
+  }
   .container {
     width: 87%;
   }
   .header-container {
     justify-content: space-between;
-    padding: 26px 0px;
+    padding: 24px 0px 21px 0;
   }
   .header-logo {
     height: 48px;
@@ -695,39 +744,119 @@ button {
   .burger {
     display: inline-block;
   }
+  .search-btn {
+    margin-right: 0;
+  }
   .poster {
-    padding-top: 160px;
+    padding-top: 156px;
+    padding-left: 42px;
+    padding-bottom: 105px;
+    margin-bottom: 55px;
   }
   .poster-article {
     width: 95%;
   }
   .poster-title {
-    font-size: 60px;
-    line-height: 73px;
-    margin-bottom: 18px;
+    font-size: 56px;
+    line-height: 70px;
+    margin-bottom: 7px;
   }
   .poster-description {
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 110px;
+    margin-bottom: 100px;
+  }
+  .poster-btn {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .about-us {
+    margin-bottom: 40px;
+  }
+  .about-us-title {
+    margin-bottom: 22px;
+  }
+  .about-us-description {
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 58px;
+  }
+  .about-us-info-block1 {
+    min-height: 0;
+    padding-top: 467px;
+  }
+  .about-us-info-block-more-module {
+    padding: 43px 50px 40px 44px;
+  }
+  .about-us-info-block-btn {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 16px 30px;
+    margin-left: 158px;
   }
   .about-us-info-block2-item {
     padding-left: 103px;
+    padding-top: 67px;
+    padding-bottom: 72px;
+  }
+  .how-we-work {
+    margin-bottom: 50px;
+  }
+  .how-we-work-title {
+    margin-bottom: 34px;
   }
   .how-we-work-steps-item:not(:last-child) {
-    margin-right: 65px;
+    margin-right: 82px;
+  }
+  .how-we-work-steps-list {
+    margin-bottom: 32px;
+  }
+  .how-we-work-article-title {
+    margin-bottom: 0;
   }
   .how-we-work-article-info {
     max-width: 437px;
   }
+  .how-we-work-article-description {
+    line-height: 31px;
+    margin-bottom: 20px;
+  }
   .how-we-work-article-picture {
     max-width: 437px;
   }
+  .questions {
+    margin-bottom: 56px;
+  }
+  .questions-title {
+    margin-bottom: 32px;
+  }
   .questions-item {
     font-size: 20px;
+    line-height: 32px;
+  }
+  .questions-item-link {
+    padding: 28px 0;
+  }
+  .footer-container {
+    padding-top: 44px;
+  }
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+  .footer-nav-link {
+    font-size: 16px;
   }
   .footer-form {
     flex-basis: 60%;
+    padding-left: 0;
+  }
+  .footer-input {
+    width: 0;
+    width: 100%;
+  }
+  textarea {
+    min-width: 100%;
+    max-width: 100%;
   }
   .footer-btn {
     padding: 20px 38px;
@@ -741,9 +870,8 @@ button {
   .container {
     width: 87%;
   }
-
   .header-container {
-    padding: 12px 0;
+    padding: 8px 0 12px 0;
   }
   .poster {
     width: 100%;
@@ -753,112 +881,149 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 68px;
   }
-
   .poster-article {
-    width: 100%; 
+    width: 100%;
   }
-
   .poster-title {
-    margin-bottom: 18px;
+    line-height: 75px;
+    margin-bottom: 9px;
   }
-
   .poster-description {
     margin-bottom: 110px;
   }
-
   .about-us {
     margin-bottom: 58px;
   }
-
-  .about-us-info-block-more-module {
-    padding: 30px;
+  .about-us-description {
+    font-size: 16px;
+    line-height: 32px;
   }
-
+  .about-us-info-block1 {
+    max-height: 668px;
+    padding-top: 470px;
+  }
+  .about-us-info-block-more-module {
+    padding: 28px 30px 26px 30px;
+  }
+  .about-us-info-block-btn {
+    font-size: 16px;
+    padding: 16px 38px;
+    margin-left: 33px;
+  }
   .about-us-info-block2-item {
     padding: 40px;
     align-items: center;
   }
-
   .about-us-info-block2-item-text {
     max-width: 452px;
     margin-left: 25px;
   }
-
   .about-us-info-block2-item-title {
     margin-bottom: 5px;
   }
-
+  .how-we-work {
+    margin-bottom: 58px;
+  }
   .how-we-work-steps-list {
     justify-content: space-between;
+    margin-bottom: 40px;
   }
-
   .how-we-work-steps-item {
     margin: 0;
   }
-
   .how-we-work-article {
     flex-direction: column-reverse;
   }
-
   .how-we-work-article-info {
     max-width: 100% !important;
   }
-
+  .how-we-work-article-description {
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 30px;
+  }
   .how-we-work-article-picture {
     max-width: 100%;
+    max-height: 284px;
     margin-bottom: 38px;
   }
-
   .questions {
     margin-bottom: 58px;
   }
-
-  .questions-item-link {
-    padding: 33px;
+  .questions-title {
+    font-size: 48px;
+    line-height: 59px;
+    margin-bottom: 35px;
+    letter-spacing: -0.030em;
   }
-
+  .questions-item-link {
+    padding: 26px 0;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .questions-button {
+    margin-left: 100px;
+  }
   .footer-container {
     flex-direction: column-reverse;
   }
-
   .footer-logo {
     width: 224px;
   }
-
   .footer-form {
     margin-bottom: 58px;
     margin-left: 0;
     width: 100%;
   }
-
   .footer-nav {
     display: none;
   }
-  
+  .social-media {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 544px) {
   .title {
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 29px;
     margin-bottom: 29px;
   }
-
+  .title-2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
   .container {
     width: 90%;
   }
   .header-container {
     padding: 7px 0;
   }
-
+  .header-logo-link {
+    order: 0;
+  }
+  .header-logo {
+    height: 31px;
+  }
+  .burger {
+    order: 1;
+    width: 25px;
+  }
+  .search-btn {
+    display: none;
+  }
+  .about-us-description {
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 5px;
+  }
   .poster {
-    width: 100%;
-    padding-top: 70px;
-    padding-left: 25px;
-    padding-right: 25px;
+    width: 90%;
+    padding: 32px 21px 40px 22px;
     margin-bottom: 39px;
-    
   }
   .poster-article {
     display: flex;
@@ -866,39 +1031,47 @@ button {
     align-items: center;
   }
   .poster-title {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 8px;
     text-align: center;
   }
   .poster-description {
+    font-size: 12px;
+    line-height: 15px;
     font-weight: 400;
+    margin-bottom: 36px;
     text-align: center;
-    margin-bottom: 34px;
+  }
+  .poster-btn {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 13px 30px;
   }
   .about-us {
-    margin-bottom: 39px;
+    margin-bottom: 35px;
   }
   .about-us-title {
-    font-size: 30px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+    margin-bottom: 2px;
   }
-
   .about-us-description {
     font-size: 14px;
-    line-height: 28px;  
+    line-height: 28px;
     font-weight: 400;
+    letter-spacing: -0.020em;
+    margin-bottom: 8px;
   }
-
   .about-us-picture {
     display: inline-block;
   }
-
   .about-us-info-block1 {
     background-image: none;
     padding-top: 0;
     margin-bottom: 40px;
   }
-
   .about-us-info-block-more-module {
     color: var(--dark-grey);
     flex-direction: column;
@@ -907,61 +1080,53 @@ button {
     font-size: 14px;
     line-height: 28px;
   }
-
   .about-us-info-block-description {
     margin: 8px 0;
     font-weight: 400;
   }
-
   .about-us-info-block-btn {
     color: var(--orange);
     align-self: flex-start;
-    padding: 11px 30px;
+    padding: 10px 40px;
     font-size: 12px;
     line-height: 15px;
+    margin-left: 0;
   }
-
   .about-us-info-block-btn:hover, .about-us-info-block-btn:focus {
     color: var(--white);
   }
-
   .about-us-info-block2-item {
     flex-direction: column;
     align-items: start;
     border: none;
     padding: 0;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
   }
-
   .about-us-info-block2-item-text {
     margin-left: 0;
-  }
-
-  .about-us-info-block2-item-text {
     font-size: 14px;
     line-height: 28px;
   }
-
-  .consult::before,
-  .quality::before {
+  .consult::before, .quality::before {
     content: '';
     display: block;
     width: 64px;
     height: 49px;
     background-position: left;
-    margin-bottom: 13px;
+    margin-bottom: 10px;
   }
-
   .how-we-work {
     margin-bottom: 39px;
   }
+  .how-we-work-title {
+    margin-bottom: 25px;
+  }
   .how-we-work-steps-list {
-    margin-bottom: 17px;
+    margin-bottom: 7px;
   }
   .how-we-work-steps-item:not(:last-child) {
     margin-right: 24px;
   }
-
   .how-we-work-steps-link {
     font-size: 14px;
     line-height: 17px;
@@ -970,54 +1135,68 @@ button {
   .how-we-work-article-picture {
     margin-bottom: 15px;
   }
-
   .how-we-work-article-title {
     margin-bottom: 4px;
   }
-
   .how-we-work-article-description {
     margin-bottom: 22px;
-  }
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: -0.015em;
 
+  }
   .how-we-work-article-btn {
-    padding: 11px 25px;
+    padding: 11px 41px;
+    font-size: 12px;
+    line-height: 15px;
   }
-
   .how-we-work-article-btn-white {
+    padding: 11px 30px;
     margin-left: 10px;
   }
-  .questions-item-link {
-    padding-left: 0;
-    padding-right: 0;
-    font-size: 14px;
-    line-height: 24px;
+  .questions {
+    margin-bottom: 35px;
   }
-
+  .questions-title {
+    margin-bottom: 15px;
+  }
+  .questions-item-link {
+    padding: 22px 0;
+    font-size: 14px;
+    line-height: 24px;  
+    font-weight: 400px;
+    letter-spacing: -0.015em;
+  }
   .questions-button {
-    margin-left: 20px;
+    margin-left: 25px;
     width: 30px;
     height: 30px;
   }
-
   .questions-button::before {
     width: 18.5px;
     height: 1px;
     top: 50%;
     right: 15%;
   }
-  
   .questions-button::after {
     width: 1px;
     height: 18.5px;
     top: 15%;
   }
-
+  .footer-container {
+    padding-top: 39px;
+    padding-bottom: 25px;
+  }
   .footer-form {
+    padding-top: 0;
     padding-bottom: 25px;
     border-bottom: 1px solid #595959;
     margin-bottom: 25px;
   }
-
+  .footer-form-title {
+    margin-bottom: 21px;
+  }
   .footer-input::placeholder {
     font-size: 14px;
     line-height: 32px;
@@ -1029,97 +1208,26 @@ button {
     flex-direction: column;
     align-items: center;
   }
-
   .footer-btn {
-    margin-bottom: 11px;
+    margin-bottom: 15px;
     margin-right: 0;
-    padding: 12px 25px;
+    padding: 12px 30px;
     font-size: 12px;
     line-height: 15px;
   }
-
   .footer-form-checkbox {
     font-size: 16px;
-    line-height: 32px;  
+    line-height: 32px;
+    margin-left: 0;
   }
-
   .footer-info {
     align-items: center;
   }
-  
-
-}
-
-
-@media (max-width: 320px) {
-  .title {
-    font-size: 24px;
-    line-height: 29px;
-    margin-bottom: 29px;
-  }
-  .title-2 {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 32px;
-  }
-  .header-logo-link {
-    order: 0;
-  }
-  .header-logo {
-    height: 31px;
-  }
-
-  .burger {
-    order: 1;
-    width: 25px;
-  }
-
-  .search-btn {
-    display: none;
-  }
-
-  .poster {
-    width: 87%;
-    padding: 32px 21px;
-    margin-bottom: 39px;
-  }
-
-  .poster-title {
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 6px;
-  }
-
-  .poster-description {
-    font-size: 12px;
-    line-height: 15px;
-    margin-bottom: 34px;
-  }
-
-  .poster-btn {
-    font-size: 12px;
-    line-height: 15px;
-    padding: 11px 20px;
-  }
-
-  .about-us-description {
-    font-size: 14px;
-    line-height: 28px;
-    margin-bottom: 5px;
-  }
-
-  .footer-container {
-    padding-bottom: 25px;
-  }
-
   .footer-logo {
     max-width: 131px;
   }
-
   .social-media-link {
     width: 35px;
     height: 35px;
   }
-
-  
 }
