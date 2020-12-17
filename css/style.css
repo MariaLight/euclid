@@ -142,7 +142,6 @@ button {
 }
 
 .header-container {
-  display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -930,6 +929,7 @@ textarea {
   .header-container {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+    justify-content: space-between;
     padding: 24px 0px 21px 0;
   }
   .header-logo {
